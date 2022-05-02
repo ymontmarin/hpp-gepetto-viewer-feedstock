@@ -1,6 +1,6 @@
 {% set name = "hpp-gepetto-viewer" %}
 {% set major = "4.10" %}
-{% set version = "4.10.1" %}
+{% set version = "4.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/hpp-gepetto-viewer/releases/download/v{{ version }}/hpp-gepetto-viewer-{{ version }}.tar.gz
-  sha256: 45e71e94099f5478b5e4992937342bb3232f3eea1d4fc4d5c441ea4056f76241
+  sha256: 2f083aa9a4485af7b6b305a9ba1924e7bace84ca821ae2aa730fa90a964933f1
 
 build:
   number: 0
@@ -70,7 +70,7 @@ about:
   home: https://github.com/humanoid-path-planner/{{ name }}
   license: LGPL-3.0-or-later
   license_file: COPYING
-  summary: '{{ name }} subpackage of Humanoid Path Planner suite'
+  summary: {{ name }} subpackage of Humanoid Path Planner suite
   description: |
     HPP (Humanoid Path Planner) is a collection of software packages implementing
     path planning functionalities for a humanoid robot. The core functionalities are well
