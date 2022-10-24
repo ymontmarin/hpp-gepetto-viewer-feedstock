@@ -50,7 +50,7 @@ requirements:
     - octomap
     - urdfdom
     - ffmpeg
-    - qt
+    - qt-main
     - openscenegraph
     - openscenegraph-osgqt
     - python
