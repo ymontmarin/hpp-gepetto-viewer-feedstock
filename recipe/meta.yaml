@@ -1,6 +1,5 @@
 {% set name = "hpp-gepetto-viewer" %}
-{% set major = "4.10" %}
-{% set version = "4.11.0" %}
+{% set version = "4.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/hpp-gepetto-viewer/releases/download/v{{ version }}/hpp-gepetto-viewer-{{ version }}.tar.gz
-  sha256: 2f083aa9a4485af7b6b305a9ba1924e7bace84ca821ae2aa730fa90a964933f1
+  sha256: ae6c696a560d7bff8503006a3d5556ba05df0449944e177f80e08aaa17156b67
 
 build:
   number: 0
@@ -23,26 +22,27 @@ requirements:
     - make
     - pkg-config
     - doxygen
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libselinux-devel') }}      # [linux]
-    - {{ cdt('libxdamage-devel') }}      # [linux]
-    - {{ cdt('libx11-devel') }}          # [linux]
-    - {{ cdt('libxfixes') }}             # [linux]
-    - {{ cdt('libxxf86vm') }}            # [linux]
-    - {{ cdt('libxext') }}               # [linux]
-    - python
+    - python                              # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - {{ cdt('mesa-libgl-devel') }}       # [linux]
+    - {{ cdt('mesa-dri-drivers') }}       # [linux]
+    - {{ cdt('libselinux-devel') }}       # [linux]
+    - {{ cdt('libxdamage-devel') }}       # [linux]
+    - {{ cdt('libx11-devel') }}           # [linux]
+    - {{ cdt('libxfixes') }}              # [linux]
+    - {{ cdt('libxxf86vm') }}             # [linux]
+    - {{ cdt('libxext') }}                # [linux]
   host:
-    - hpp-util ={{ major }}
-    - hpp-statistics ={{ major }}
-    - hpp-pinocchio ={{ major }}
-    - hpp-constraints ={{ major }}
-    - hpp-core ={{ major }}
-    - hpp-template-corba ={{ major }}
-    - hpp-corbaserver ={{ major }}
-    - hpp-manipulation ={{ major }}
-    - hpp-manipulation-urdf ={{ major }}
-    - hpp-manipulation-corba ={{ major }}
+    - hpp-util  {{ version }}
+    - hpp-statistics  {{ version }}
+    - hpp-pinocchio  {{ version }}
+    - hpp-constraints  {{ version }}
+    - hpp-core  {{ version }}
+    - hpp-template-corba  {{ version }}
+    - hpp-corbaserver  {{ version }}
+    - hpp-manipulation  {{ version }}
+    - hpp-manipulation-urdf  {{ version }}
+    - hpp-manipulation-corba  {{ version }}
     - gepetto-viewer-corba
     - gepetto-viewer
     - boost-cpp
@@ -62,7 +62,7 @@ requirements:
 test:
   requires:
     - pkg-config
-    - hpp-corbaserver ={{ major }}
+    - hpp-corbaserver  {{ version }}
   commands:
     - pkg-config --modversion {{ name }}
 
@@ -82,3 +82,4 @@ about:
 extra:
   recipe-maintainers:
     - ymontmarin
+    - jcarpent
