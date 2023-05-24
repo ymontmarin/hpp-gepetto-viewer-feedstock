@@ -49,7 +49,6 @@ requirements:
     - assimp
     - octomap
     - urdfdom
-    - ffmpeg
     - qt-main
     - openscenegraph
     - openscenegraph-osgqt
