@@ -1,11 +1,11 @@
-About hpp-gepetto-viewer
-========================
+About hpp-gepetto-viewer-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hpp-gepetto-viewer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/humanoid-path-planner/hpp-gepetto-viewer
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hpp-gepetto-viewer-feedstock/blob/main/LICENSE.txt)
 
 Summary: hpp-gepetto-viewer subpackage of Humanoid Path Planner suite
 
