@@ -10,7 +10,7 @@ source:
   sha256: 4ff58706dd8a388753faca7fa6e17e84a920e917c1db00c742dd5ed1dea17fe5
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - make
     - pkg-config
