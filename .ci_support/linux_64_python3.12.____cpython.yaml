@@ -1,11 +1,11 @@
 assimp:
-- 5.3.1
+- 5.4.1
 c_stdlib:
 - sysroot
 c_stdlib_version:
-- '2.12'
+- '2.17'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
@@ -24,6 +24,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.12.* *_cpython
+qhull:
+- '2020.2'
 qt_main:
 - '5.15'
 target_platform:
