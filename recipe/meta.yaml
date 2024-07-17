@@ -49,9 +49,13 @@ requirements:
     - openscenegraph
     - openscenegraph-osgqt
     - python
+    - qhull
+    - qhull-static
   run:
     - numpy
     - python
+    - qhull
+    - qhull-static
 
 test:
   requires:
@@ -62,8 +66,8 @@ test:
 
 about:
   home: https://github.com/humanoid-path-planner/{{ name }}
-  license: LGPL-3.0-or-later
-  license_file: COPYING
+  license: BSD-2-Clause
+  license_file: LICENSE
   summary: {{ name }} subpackage of Humanoid Path Planner suite
   description: |
     HPP (Humanoid Path Planner) is a collection of software packages implementing
